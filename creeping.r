@@ -14,7 +14,7 @@
 		#SDbyBin.png - plots the average variation in FST per bin 
 	
 	
-#Data must be in data frame format with 3 columns corresponding to region, position, and fst value IN THAT ORDER!
+#Data must be in data frame format with 3 columns corresponding to region, position, and fst value. Order data frame on ascending on position
 	#	       chr1 156 0.00070403
 	#	       chr1 203 0.00008735
 	#					...
@@ -23,13 +23,15 @@
 	
 
 # Declare Variables ----------------------------
-window.size = 5000 #size of window to be crept and gaps to skip, in BP 
+
+window.size = 1000 #size of window to be crept and gaps to skip, in BP 
 bin.size = 6 # minimum number of SNPs in a window (bin size, see plot)
 signi = 0.01 #significance cutoff for high windows 
-fst.frame =  #insert name of data frame of fst, as above
+fst.frame = fst.frame #insert name of data frame of fst, as above
 
 	
 # Load Required Functions and Pakcages ------------------------
+
 library(IRanges)
 library(Hmisc)
 library(ggplot2)
@@ -64,10 +66,10 @@ creeper<-function(fst.frame, window.size ){
 	snp = as.numeric(fst.frame$POS)
 	fst = as.numeric(fst.frame$fst45)
 	#estimate difference between SNPs	
-	p = as.numeric(fst.frame$POS[fst.frame$V2==k])
+	p = snp
 	p = p[-1]
 	p = c(p, NA)
-	diff = abs(as.numeric(fst.frame$POS[fst.frame$V2==k])-p)
+	diff = abs(snp-p)
 	diff = diff[!is.na(diff)]
 
 	x=rep(0, (max(snp)+ window.size))
@@ -141,6 +143,7 @@ creeper=creeper[(creeper$bin > bin.size),]
 		#estimates mean FST of those random SNPs
 		#repeats N times 
 	#corrects for multiple testing  with Q test (Storey Method)
+	
 num = creeper$num_snps
 lec=perm.creeper(n=100000, num=num)
 creeper$pnorm.fst=pnorm(creeper$fstHvL, mean=mean(lec), sd=sd(lec),lower.tail=F)
