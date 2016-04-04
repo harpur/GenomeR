@@ -34,9 +34,13 @@ An example of this would be:
 source("Q_correct.r")
 source("VarFunct.r") #for permutation function
 	
-#run Permuation --------------------------------- 	
+#run Permutation --------------------------------- 	
 	#"creeper" data frame is generated from creeper() function
-
+head(creeper)
+        fst num_snps start  end
+2 0.1428318        3  3790 4296
+3 0.1912891        2  3798 4296
+5 0.1949204        3  5579 6429
 num = creeper$num_snps
 lec = perm.creeper(n=100000, num=num)
 creeper$pnorm.fst = pnorm(creeper$fstHvL, mean=mean(lec), sd=sd(lec),lower.tail=F)
