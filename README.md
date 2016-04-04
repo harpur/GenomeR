@@ -23,5 +23,35 @@ Manhattan plots for GWAS analysis
 FDR correction using [Storey's Q](http://www.genomine.org/papers/directfdr.pdf)
 
 ###creeping.r
-For [Qanbari et al. (2012)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0049525) creeping window analysis with Fst values. The file contains a general work flow for identifying significantly high Fst windows using permutation and corrects for FDR using [Storey's Q](http://www.genomine.org/papers/directfdr.pdf).  It does not yet collate significant windows together into larger regions, but I'll integrate "IRanges" from the Bioconductor suite later. It also doesn't yet plot the result.
+For [Qanbari et al. (2012)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0049525) creeping window analysis with Fst values. After removing windows that don't contain enough SNP sites, 
+
+
+To come is a general work flow for identifying significantly high Fst windows. using perm.creeper() function and then correcting for multiple tests using [Storey's Q](http://www.genomine.org/papers/directfdr.pdf), found in Q_correct.r.  High Fst windwos can then be collated with IRanges" from the BioconductoR suite
+
+An example of this would be:
+
+<pre><code># Load Required  Packages ------------------------
+source("Q_correct.r")
+source("VarFunct.r") #for permutation function
+	
+#run Permuation --------------------------------- 	
+	#"creeper" data frame is generated from creeper() function
+
+num = creeper$num_snps
+lec = perm.creeper(n=100000, num=num)
+creeper$pnorm.fst = pnorm(creeper$fstHvL, mean=mean(lec), sd=sd(lec),lower.tail=F)
+creeper$q = qvalue1(creeper$pnorm.fst)$q
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
 
