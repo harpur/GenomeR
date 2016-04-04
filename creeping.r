@@ -134,7 +134,7 @@ dev.off()
 
 png(file="SDbyBin.png")
 	plot(var.plot,pch=16)
-	bline(v= bin.size, col="red", lty=2) 
+	abline(v= bin.size, col="red", lty=2) 
 dev.off()
 
 creeper = creep.all
