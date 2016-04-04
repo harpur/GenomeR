@@ -10,10 +10,7 @@ creeper<-function(fst.frame, window.size = 1000 ){
 		#This script takes in a data frame of Fst values for each position in A SINGLE chromosome/scaffold (henceforth "region")
 		#The script divides the region into equal bp windows and places SNPs into their appropriate windows
 		#For each window, it then estimates mean FST, skipping any window in which the distance between snps is > window.size
-		#Outputs 2 plots to help trim windows based on the number of SNPs included in them 
-			#NumSNPsbyBin.png - plots the variation in FST per bin (bin is a bin of window lengths)
-			#SDbyBin.png - plots the average variation in FST per bin 
-			
+
 	#This script requires from the user 2 inputs:
 		#1) Data must be in data frame format with 3 columns corresponding to region, position, and fst value. Order data frame on ascending on position. Do not include missing data (i.e. "NA")
 			#	       chr1 156 0.00070403
@@ -27,11 +24,8 @@ creeper<-function(fst.frame, window.size = 1000 ){
 		#Col 2 = number of SNPs per window
 		#Col 3 = first SNP in the window
 		#Col 4 = last SNP in the window (NOTE: this is a creeping window, so all SNPs will be used more than once)
+
 		
-		
-		#uses base pair position and it's corresponding FST value to estimate mean fst in 	
-		#creeping windows of basepair length (window.size arg). 
-	
 	names(fst.frame) = c("V2", "POS", "fst45")
 	#Gather SNPs and FST as numeric variables
 	snp = as.numeric(fst.frame$POS)
