@@ -24,7 +24,6 @@ creeper<-function(fst.frame, window.size = 1000 ){
 		#Col 2 = number of SNPs per window
 		#Col 3 = first SNP in the window
 		#Col 4 = last SNP in the window (NOTE: this is a creeping window, so all SNPs will be used more than once)
-
 		
 	names(fst.frame) = c("V2", "POS", "fst45")
 	#Gather SNPs and FST as numeric variables
