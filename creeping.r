@@ -24,29 +24,28 @@
 	#2) A window size (variable "window.size") in bp that will be the minimum size of a region in the scan 
 	#3) A bin size cut off for minimum number of SNPs per window (6 with 1Kb, window, for example)
 
+#after running creeper function, a data frame is output. 
+	#Col 1 = mean Fst per window
+	#Col 2 = number of SNPs per window
+	#Col 3 = first SNP in the window
+	#Col 4 = last SNP in the window (NOTE: this is a creeping window, so all SNPs will be used more than once)
+
 	
+
 	
 	
 # Declare Variables ----------------------------
 # minimum number of SNPs in a window (bin size, see plot)
 signi = 0.01 #significance cutoff for high windows 
 fst.frame = c() #insert name of data frame of fst, as above
-window.size = 1000	
-bin.size = 6	
+window.size = 1000	#number of base pairs per window
+bin.size = 6 # to get a range for the number of SNPs in this bin size, try: range(creeper$num_snps[which(creeper$bin==bin.size)])
 
-	
 	
 	
 # Load Required  Packages ------------------------
-library(IRanges)
-library(Hmisc)
-library(ggplot2)
-library(plyr)
-library(reshape2)
-library(RColorBrewer)
-library(scales)
 source("Q_correct.r")
-
+library(reshape2)
 
 # Load Required  functions ------------------------
 perm.creeper <-function(n=999,  num=num, fst=creeper$fstHvL){
@@ -135,16 +134,6 @@ png(file="SDbyBin.png")
 	plot(var.plot,pch=16)
 	bline(v= bin.size, col="red", lty=2) 
 dev.off()
-
-
-
-
-
-
-
-
-
-
 
 creeper = creep.all
 creeper=creeper[(creeper$bin > bin.size),]
