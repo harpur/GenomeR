@@ -1,6 +1,6 @@
 GenomeR
 =======
-This is, for the time, a directory containing scripts I use day-to-day for dealing with genomic data in R. It is updated often, but assume all scripts and functions, are works-in-progress unless otherwise stated
+This is, for the time, a directory containing scripts I use day-to-day for dealing with genomic data in R. It is updated often, but assume all scripts and functions are works-in-progress unless otherwise stated
 
 ###VCFFunctions.r 
 Functions for dealing with VCF files in R

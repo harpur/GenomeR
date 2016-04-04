@@ -14,7 +14,7 @@ creeper<-function(fst.frame, window.size = 1000 ){
 			#NumSNPsbyBin.png - plots the variation in FST per bin (bin is a bin of window lengths)
 			#SDbyBin.png - plots the average variation in FST per bin 
 			
-	#This script requires from the user 3 inputs:
+	#This script requires from the user 2 inputs:
 		#1) Data must be in data frame format with 3 columns corresponding to region, position, and fst value. Order data frame on ascending on position. Do not include missing data (i.e. "NA")
 			#	       chr1 156 0.00070403
 			#	       chr1 203 0.00008735
