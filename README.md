@@ -47,14 +47,14 @@ creeper$pnorm.fst = pnorm(creeper$fstHvL, mean=mean(lec), sd=sd(lec),lower.tail=
 creeper$q = qvalue1(creeper$pnorm.fst)$q
 </code></pre>
 
+###ancestryPlots.R 
 
+This function takes output from [Ancestry HMM](http://biorxiv.org/content/early/2016/07/15/064238) for many individuals and plots the data as an average +/- SD ancestry of the focal lineage. 
 
-
-
-
-
-
-
+usage: 
+<pre><code>
+Rscript ancestryPlots.R <FILE1 .ahmm.maxpost>
+</code></pre>
 
 
 
