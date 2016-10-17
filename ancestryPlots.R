@@ -26,8 +26,8 @@ require(grid)
 
 #load data.frames --------------
 args = commandArgs(trailingOnly=TRUE)
-anc = read.table(file= "nofilter.6.Ne5k.ahmm.maxpost",header=F, skip=1) #args[1]
-chr = "6"#args[2]
+anc = args[1] #read.table(file= "nofilter.6.Ne5k.ahmm.maxpost",header=F, skip=1) #
+chr = args[2]
 samps = ncol(anc) -1
 names(anc) = c("POS", paste("SAMPLE",c(1:samps),sep=""))
 scaffs = read.table(file="scaffolds_on_chr.txt",header=T)
