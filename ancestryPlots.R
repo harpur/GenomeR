@@ -10,7 +10,7 @@
 #to do:
 	#Generalize a bit more....
 	#add in errors for missing packages
-
+	#colour by scaffold?
 	
 #usage: Rscript ancestryPlots.R <FILE1 .ahmm.maxpost>
 
@@ -62,7 +62,7 @@ mean.anc.plot = ggplot(mean.anc.df,aes(x=pos,y=mn)) +
 							panel.border = element_blank()
 							) +						
 				labs(x = "Position (bp)", y = "Proportion M Ancestry")
- mean.anc.plot
+#mean.anc.plot
 ggsave(filename = paste(args[1], ".png",sep=""), mean.anc.plot, width = 12, height = 6, units = "in" )	
 
 
