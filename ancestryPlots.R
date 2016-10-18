@@ -26,16 +26,16 @@ require(grid)
 
 #load data.frames --------------
 args = commandArgs(trailingOnly=TRUE)
-anc = args[1] #read.table(file= "nofilter.6.Ne5k.ahmm.maxpost",header=F, skip=1) #
+anc =  read.table(file= args[1] ,header=F, skip=1)
 chr = args[2]
 samps = ncol(anc) -1
 names(anc) = c("POS", paste("SAMPLE",c(1:samps),sep=""))
-scaffs = read.table(file="scaffolds_on_chr.txt",header=T)
+scaffs = read.table(file="../resources/scaffold_chr_map_4.5.txt",header=T)
 
 #anc$relPOS = seq(1,nrow(anc),1)
 #anc$POS = NULL
 #anc.lineage = 1-anc
-
+#sudo Rscript ancestryPlots.R /home/charlie/PooledAfz/pooledahmm_data/nofilter.16.Ne5kHiRes.ahmm.maxpost 16
 
 #Calculate MN and SD for lineage -------------------------
 mean.anc = apply(anc[-1],1 , mean,na.rm=T)
@@ -43,7 +43,7 @@ sd.anc = apply(anc[-1],1 , sd,na.rm=T)
 
 #create dataframes -------------------------------------
 mean.anc.df = data.frame(cbind(mn = mean.anc,sd = sd.anc,pos = anc$POS))
-scaffs = scaffs[scaffs$chr==paste("chr", chr, sep=""),]
+scaffs = scaffs[scaffs$chromosome==chr,]
 
 
 
@@ -76,7 +76,7 @@ mean.anc.plot = ggplot(mean.anc.df,aes(x=pos,y=mn)) +
 				
 				
 				
-mean.anc.plot
+#mean.anc.plot
 
 
 
