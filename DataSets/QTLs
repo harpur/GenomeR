@@ -1,0 +1,12 @@
+#data from blasting QTL markers against AMEL4.5, reference after comment
+Ovary Size	11.18:312802	11.18:4212802	#Linksvayer et al, Genetics 2009
+Ovary Activation	15.16:124351	15.19:1420418	#Oxley et al, Genetics 2008
+VSH	9.10:4394453	9.104699191	#Tsuruda et al. 2012
+VSH 9.12:1715429	9.12:1818911	#Tsuruda et al. 2012
+HYG	2.19:1245006	2.19:86589	# Oxley et al 2012
+HYG	5.14:527544	5.14:1558442	# Oxley et al 2012
+HYG	16.2:42885	16.4:920721	# Oxley et al 2012
+Pollen	2.19:1245006	2.19:86589	# Hunt et al. 2007
+Sting		7.6:69000	7.7:257000	# Hunt et al.
+Sting	3.14	3.15	#persComm JG
+alarmpher	12.17	12.17	#persComm JG
