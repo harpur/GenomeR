@@ -8,8 +8,9 @@ HYG	2.19:1245006	2.19:86589	# Oxley et al 2012
 HYG	5.14:527544	5.14:1558442	# Oxley et al 2012
 HYG	16.2:42885	16.4:920721	# Oxley et al 2012
 Pollen	2.19:1245006	2.19:86589	# Hunt et al. 2007
-Sting		7.6:69000	7.7:257000	# Hunt et al.
-Sting	3.14	3.15	#persComm JG
+Sting		7.6	7.11	# Hunt et al.
+Sting	3.4	3.5	#persComm JG
+hang	11.18:539788	NA	#Hunt et al.
 alarmpher	12.17	12.17	#persComm JG
 AOF	Group4.9:966851  	 Group4.13:849812 	 #Ruepell 2009
 AOF	Group5.9:1209638  	Group5.14:673777	 #Ruepell 2009
