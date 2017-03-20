@@ -4,10 +4,9 @@ Ovary Activation	15.16:124351	15.19:1420418	#Oxley et al, Genetics 2008
 VSH	1.29:1667502	1.32:393423		#Tsuruda et al. 2012
 VSH	9.10:4394453	9.10:4699191	#Tsuruda et al. 2012
 VSH 9.12:1715429	9.12:1818911	#Tsuruda et al. 2012
-HYG	2.19:1245006	2.19:86589	# Oxley et al 2012
-HYG	5.14:527544	5.14:1558442	# Oxley et al 2012
-HYG	16.2:42885	16.4:920721	# Oxley et al 2012
-Pollen	2.19:1245006	2.19:86589	# Hunt et al. 2007
+HYG	2.19:1245006	2.19:86589	# Oxley et al 2010
+HYG	5.14:527544	5.14:1558442	# Oxley et al 2010
+HYG	16.2:42885	16.4:920721	# Oxley et al 2010
 Sting		7.6	7.11	# Hunt et al.
 Sting	3.4	3.5	#persComm JG
 hang	11.18:539788	NA	#Hunt et al.
@@ -16,4 +15,4 @@ AOF	Group4.9:966851  	 Group4.13:849812 	 #Ruepell 2009
 AOF	Group5.9:1209638  	Group5.14:673777	 #Ruepell 2009
 AOF	Group1.42:1	Group1.42:1120978	 #Ruepell 2009
 AOF	Group6.28:1	Group6.28:803170	 #Ruepell 2009
-
+pln3 Group1.15:1160334	NA				#Hunt 2007
