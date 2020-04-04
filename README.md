@@ -1,28 +1,28 @@
 GenomeR
 =======
-This is, for the time, a directory containing scripts I use day-to-day for dealing with genomic data in R. It is updated often, but assume all scripts and functions are works-in-progress unless otherwise stated
+This is, for the time, a directory containing hacky scriptsI have used for dealing with genomic data in R. They are in various states of completion. When frequetly used, they git pushed into developing R packages or pipelines. 
 
-###VCFFunctions.r 
+# VCFFunctions.r 
 Functions for dealing with VCF files in R
 
-###VarFunct.r
+# VarFunct.r
 Various useful functions in R
 
-###snipre.r 
+# snipre.r 
 Used for running [Bustamante's SnIPRE](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002806) to estimate the selection coefficient on genes in a give genome
 
 script for running SNIPRE to estimate gamma on genes in a genome
 
-###ReferencetoDataframe.r
+# ReferencetoDataframe.r
 Takes in a fasta file, loads it as a data frame
 
-###manhattan.r
+# manhattan.r
 Manhattan plots for GWAS analysis
 
-###Q_correct.r
+# Q_correct.r
 FDR correction using [Storey's Q](http://www.genomine.org/papers/directfdr.pdf)
 
-###creeping.r
+# creeping.r
 For [Qanbari et al. (2012)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0049525) creeping window analysis with Fst values. After removing windows that don't contain enough SNP sites, 
 
 
@@ -47,7 +47,7 @@ creeper$pnorm.fst = pnorm(creeper$fstHvL, mean=mean(lec), sd=sd(lec),lower.tail=
 creeper$q = qvalue1(creeper$pnorm.fst)$q
 </code></pre>
 
-###ancestryPlots.R 
+# ancestryPlots.R 
 
 This function takes output from [Ancestry HMM](http://biorxiv.org/content/early/2016/07/15/064238) for many individuals and plots the data as an average +/- SD ancestry of the focal lineage. 
 
