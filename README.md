@@ -1,6 +1,13 @@
 GenomeR
 =======
-This is, for the time, a directory containing hacky scriptsI have used for dealing with genomic data in R. They are in various states of completion. When frequetly used, they git pushed into developing R packages or pipelines. 
+This is, for the time, a directory containing hacky scriptsI have used for dealing with genomic data in R. They are in various states of completion. When frequetly used, they git pushed into developing R packages or pipelines.
+
+It also contains some data sets I use for honey bee data. I will add to this occasionally. 
+
+# Data Sets
+"Hunt_markers.txt" contains a list of markers from Greg Hunt. These markers are from his QTL papers and the set here contains those. Some of these have been published and some have not. I found this list on Greg's desktop computer when I inherited the lab."Solignac_x_Cornuet_2007_BeeLinkMap_Supp.xls" contains the OG honey bee recombination map. 
+
+
 
 # VCFFunctions.r 
 Functions for dealing with VCF files in R
