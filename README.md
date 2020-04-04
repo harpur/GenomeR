@@ -1,6 +1,6 @@
 GenomeR
 =======
-This is, for the time, a directory containing hacky scriptsI have used for dealing with genomic data in R. They are in various states of completion. When frequetly used, they git pushed into developing R packages or pipelines.
+This is, for the time, a directory containing hacky scripts I have used for dealing with genomic data in R. They are in various states of completion. When frequetly used, they git pushed into developing R packages or pipelines.
 
 It also contains some data sets I use for honey bee data. I will add to this occasionally. 
 
@@ -13,26 +13,34 @@ It also contains some data sets I use for honey bee data. I will add to this occ
 
 
 # VCFFunctions.r 
+
 Functions for dealing with VCF files in R
 
 # VarFunct.r
+(outdated)
 Various useful functions in R
 
 # snipre.r 
+(outdated)
 Used for running [Bustamante's SnIPRE](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002806) to estimate the selection coefficient on genes in a give genome
 
 script for running SNIPRE to estimate gamma on genes in a genome
 
 # ReferencetoDataframe.r
+
 Takes in a fasta file, loads it as a data frame
 
 # manhattan.r
+
 Manhattan plots for GWAS analysis
 
 # Q_correct.r
+
 FDR correction using [Storey's Q](http://www.genomine.org/papers/directfdr.pdf)
 
 # creeping.r
+
+(outdated)
 For [Qanbari et al. (2012)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0049525) creeping window analysis with Fst values. After removing windows that don't contain enough SNP sites, 
 
 
