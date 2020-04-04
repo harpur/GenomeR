@@ -5,7 +5,10 @@ This is, for the time, a directory containing hacky scripts I have used for deal
 It also contains some data sets I use for honey bee data. I will add to this occasionally. 
 
 # Data Sets
-"Hunt_markers.txt" contains a list of markers from Greg Hunt. These markers are from his QTL papers and the set here contains those. Some of these have been published and some have not. I found this list on Greg's desktop computer when I inherited the lab.
+"Hunt_markers.txt" contains a list of markers from Greg Hunt. These markers are from his QTL papers and the set here contains those. Some of these have been published and some have not. I found this list on Greg's desktop computer when I inherited the lab. I uploaded them to Dryad for their continued use:
+Harpur, Brock (2020), Hunt Honey Bee Markers , Dryad, Dataset, https://doi.org/10.5061/dryad.ns1rn8ppp
+
+
 
 
 "Solignac_x_Cornuet_2007_BeeLinkMap_Supp.xls" contains the OG honey bee recombination map. 
